@@ -1,0 +1,50 @@
+"ConnectionStrings": {
+    "SampleWebApiConnection": "Server=HCR-PW0216KX;Database=SampleWebApiDB;User ID=sa;Password=Unhcr@77;TrustServerCertificate=True;Trusted_Connection=False;MultipleActiveResultSets=true",
+    "SampleWebApiConnectionSqlite": "Data Source=D:\\SampleWebApiDB.db"
+  },
+
+EntityFramework (SQL Server)
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.EntityFrameworkCore.Design
+
+EntityFramework (Sqlite)
+Microsoft.EntityFrameworkCore.Sqlite.Core
+Microsoft.EntityFrameworkCore.Sqlite 
+Microsoft.EntityFrameworkCore.Sqlite.Design
+
+AutoMapper
+
+Microsoft.AspNetCore.Authentication.JwtBearer
+Microsoft.IdentityModel.Tokens
+System.IdentityModel.Tokens.Jwt
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.IdentityModel.JsonWebTokens
+
+Logging
+Serilog
+Serilog.AspNetCore
+Serilog.Sinks.Console
+
+Serilog
+Serilog.AspNetCore
+Serilog.Sinks.File
+
+Versioning in API
+Microsoft.AspNetCore.Mvc.Versioning
+
+
+
+
+How to Add Migration in the database
+Add-Migration "Name of Migration" -Context "NZWalksDbContext"
+Update-Database -Context "NZWalksDbContext"
+
+
+
+// Extract the logged-in user information
+var userId = User.FindFirst("sub")?.Value;
+var userName = User.Identity.Name;
+var userEmail = User.FindFirst("email")?.Value;
+
